@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#transaction-list {
+    margin-top: 20px;
+}
+
+.transaction-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.transaction-item:last-child {
+    border-bottom: none;
+}
+
+.transaction-item p {
+    margin: 5px 0;
+}
+
+.takeaway {
+    color: green;
+    font-weight: bold;
+}
+.status-indicator {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red; /* Default to red */
+    vertical-align: middle;
+    margin: 5px;
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+.status-indicator {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red; /* Default to red */
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
+    transition: background-color 0.3s ease; /* Smooth transition for color change */
+}
+
+.status-indicator.pulse {
+    animation: pulse 1.5s infinite; /* Apply pulsating animation when active */
+}
+
+/* Keyframes for pulsating (heartbeat) effect */
+@keyframes pulse {
+    0% {
+        transform: scale(1); /* Start at normal size */
+        box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.7); /* Green glow at the start */
+    }
+    50% {
+        transform: scale(1.2); /* Grow in size */
+        box-shadow: 0 0 15px 10px rgba(0, 255, 0, 0); /* Stronger glow in the middle */
+    }
+    100% {
+        transform: scale(1); /* Return to normal size */
+        box-shadow: 0 0 0 0 rgba(0, 255, 0, 0); /* Fade the glow */
+    }
+}
