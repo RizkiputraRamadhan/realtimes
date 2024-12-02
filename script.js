@@ -6,7 +6,7 @@ let lastTransactionCount = 0;
 
 async function fetchTransactions() {
     try {
-        const response = await fetch('https://qrgen.tongtji.id/api/transaction/get');
+        const response = await fetch('https://qrgen.tongtji.com/api/transaction/get');
 
         if (!response.ok) {
             throw new Error(`Server responded with ${response.status}`);
